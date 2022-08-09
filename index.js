@@ -5,7 +5,6 @@ const express = require("express")
 
 const app = express()
 
-
 app.get("/posts",(req,res)=>{    
     res.json([{title:"Post 1", author:"Ouerghie Houssem", likes:"1"},{title:"Post 1", author:"Ouerghie Houssem", likes:"1"},{title:"Post 1", author:"Ouerghie Houssem", likes:"1"}])
 })
