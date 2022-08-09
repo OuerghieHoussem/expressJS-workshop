@@ -1,12 +1,21 @@
 
 
 const express = require("express")
-
+const postModel = require("./models/post")
+const mongoose = require("mongoose")
 
 const app = express()
 
+
+
 app.get("/posts",(req,res)=>{    
-    res.json([{title:"Post 1", author:"Ouerghie Houssem", likes:"1"},{title:"Post 1", author:"Ouerghie Houssem", likes:"1"},{title:"Post 1", author:"Ouerghie Houssem", likes:"1"}])
+    
+    postModel.find({}).then((posts)=>{
+
+        res.json(posts)
+    })
+    
+
 })
 app.get("/post/:id",(req,res)=>{
     res.json({title:"Post 1", author:"Ouerghie Houssem", likes:"1"})
@@ -54,6 +63,10 @@ app.delete("/user/:id",(req,res)=>{
     
 })
 
-app.listen(5000,()=>{
-    console.log("App listening on port 5000")
+
+mongoose.connect("",()=>{
+    console.log("Connected to database")
+    app.listen(5000,()=>{
+        console.log("App listening on port 5000")
+    })
 })
