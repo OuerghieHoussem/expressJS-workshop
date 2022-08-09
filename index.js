@@ -64,7 +64,9 @@ app.delete("/user/:id",(req,res)=>{
 })
 
 
-mongoose.connect("",()=>{
+CONNECTION_URL = "mongodb://127.0.0.1:27017/etiquettes"
+
+mongoose.connect(CONNECTION_URL,()=>{
     console.log("Connected to database")
     app.listen(5000,()=>{
         console.log("App listening on port 5000")
