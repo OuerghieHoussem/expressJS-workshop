@@ -1,0 +1,22 @@
+{
+  "name": "expressjs-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OuerghieHoussem/expressJS-workshop.git"
+  },
+  "author": "Ouerghie Houssem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OuerghieHoussem/expressJS-workshop/issues"
+  },
+  "homepage": "https://github.com/OuerghieHoussem/expressJS-workshop#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
